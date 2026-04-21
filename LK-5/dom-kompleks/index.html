@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <section id="manipulasi-dom">
+    <h2>Manipulasi DOM</h2>
+    <div>
+        <!--Judul Demo-->
+        <h3 id="judul-demo">Judul Demo</h3>
+        <!-- list demo -->
+         <ul id="list-demo">
+            <li class="list-demo">Item 1</li>
+            <li class="list-demo">Item 2</li>
+            <li class="list-demo">Item 3</li>
+    </div>
+    <div>
+        <h3>Pemilihan Elemen</h3>
+        <div>
+            <button id="selectByIdBtn">Pilihan dengan getElementById</button>
+            <button id="selectByClassBtn">Pilihan dengan getElementsByClass</button>
+        </div>
+    </div>
+    <div>
+        <h3>Mengubah Elemen</h3>
+        <div>
+            <button id="changeHtmlBtn">Ubah Isi Elemen</button>
+        </div>
+    </div>
+
+   </section> 
+   <script>
+    const judulDemo = document.getElementById('judul-demo');
+    const listDemo = document.getElementsByClassName('list-demo');
+
+    function resetStyle() {
+        document.querySelectorAll('#manipulasi-dom *').forEach(el => {
+            el.style.backgroundColor = '';
+            
+})
+    }
+
+    document.getElementById('selectByIdBtn').addEventListener('click', () => {
+        resetStyle();
+        judulDemo.style.backgroundColor = 'lightblue';
+    });
+
+   </script>
+</body>
+</html>

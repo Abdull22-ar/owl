@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* RESET DASAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* CARD */
+        #pendaftaran {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* FORM LAYOUT */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* BUTTON */
+        button {
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* TABLET (<= 768px) */
+        @media (max-width: 768px) {
+            #pendaftaran {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        /* MOBILE (<= 480px) */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            #pendaftaran {
+                padding: 15px;
+            }
+
+            input, select, textarea {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <!-- SECTION FORM -->
+    <section id="pendaftaran">
+        <h2>Formulir Pendaftaran</h2>
+
+        <article>
+            <form>
+
+                <!-- Nama -->
+                <label>Nama:</label><br>
+                <input type="text" name="nama" required><br><br>
+
+                <!-- Email -->
+                <label>Email:</label><br>
+                <input type="email" name="email" required><br><br>
+
+                <!-- Nomor HP -->
+                <label>No HP:</label><br>
+                <input type="tel" name="hp" required><br><br>
+
+                <!-- Kategori -->
+                <label>Kategori:</label><br>
+                <select name="kategori" required>
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="seminar">Seminar</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="pelatihan">Pelatihan</option>
+                </select><br><br>
+
+                <!-- Pesan -->
+                <label>Pesan:</label><br>
+                <textarea name="pesan" rows="4" cols="30" required></textarea><br><br>
+
+                <!-- Tombol Kirim -->
+                <button type="submit">Daftar</button>
+
+            </form>
+        </article>
+    </section>
+ </body>
